@@ -12,6 +12,8 @@ this repository contains the full copyright notices and license terms. -->
     <field name="tax_lines"/>
     <field name="description" expand="1"/>
     <field name="move_description" expand="1"/>
+    <field name="reference" expand="1"/>
+    <field name="move_reference" expand="1"/>
     <field name="reconciliation"/>
     <field name="state"/>
     <field name="move_state"/>

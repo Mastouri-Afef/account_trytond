@@ -26,6 +26,8 @@ this repository contains the full copyright notices and license terms. -->
     <field name="origin"/>
     <label name="description"/>
     <field name="description" colspan="3"/>
+    <label name="reference"/>
+    <field name="reference"/>
     <notebook colspan="4">
         <page string="Other Info" id="info">
             <label name="date"/>

@@ -70,6 +70,8 @@ class Move(ModelSQL, ModelView):
     post_date = fields.Date('Post Date', readonly=True)
     description = fields.Char('Description', states=_MOVE_STATES,
         depends=_MOVE_DEPENDS)
+    reference = fields.Char('Reference', states=_MOVE_STATES,
+        depends=_MOVE_DEPENDS)
     origin = fields.Reference('Origin', selection='get_origin',
         states=_MOVE_STATES, depends=_MOVE_DEPENDS)
     state = fields.Selection([
@@ -673,6 +675,11 @@ class Line(ModelSQL, ModelView):
         'get_move_field', searcher='search_move_field')
     description = fields.Char('Description', states=_states, depends=_depends)
     move_description = fields.Function(fields.Char('Move Description',
+            states=_states, depends=_depends),
+        'get_move_field', setter='set_move_field',
+        searcher='search_move_field')
+    reference = fields.Char('Reference', states=_states, depends=_depends)
+    move_reference = fields.Function(fields.Char('Move Reference',
             states=_states, depends=_depends),
         'get_move_field', setter='set_move_field',
         searcher='search_move_field')

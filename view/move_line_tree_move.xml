@@ -9,5 +9,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="credit" sum="Credit" symbol="currency"/>
     <field name="tax_lines"/>
     <field name="description" expand="1"/>
+    <field name="reference" expand="1"/>
     <field name="reconciliation"/>
 </tree>
